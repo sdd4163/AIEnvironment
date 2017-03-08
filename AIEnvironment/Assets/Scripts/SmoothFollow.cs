@@ -39,6 +39,8 @@ public class SmoothFollow : MonoBehaviour
 		
 		//transform.forward = Vector3.Lerp (transform.forward, target.position - transform.position, Time.deltaTime * rotationDamping);
 		transform.forward = Vector3.Lerp (transform.forward, target.forward , Time.deltaTime * rotationDamping);
+
+        transform.LookAt(target.transform);
 		
 	}
 }
