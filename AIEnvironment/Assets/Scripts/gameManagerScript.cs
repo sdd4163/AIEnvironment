@@ -189,7 +189,7 @@ public class gameManagerScript : MonoBehaviour {
                 endNodeRecord.EstimatedTotalCost = endNodeCost + endNodeHueristic;
 
                 if (!open.Contains(endNode))
-                    open.push(endNodeRecord.Cost, endNode);
+                    open.push(endNodeRecord.EstimatedTotalCost, endNode);
             }
 
             // finished looking at connections, add to closed list
