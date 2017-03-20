@@ -58,5 +58,12 @@ public class PathFollower : MonoBehaviour {
 			transform.right = tempDir.normalized;
 		}
 
+		if (Input.GetKeyDown(KeyCode.R) && !moving) {
+			Targets.Reverse();
+			currentTarget = Targets[0];
+			index = 0;
+			moving = true;
+		}
+
 	}
 }
