@@ -51,32 +51,38 @@ public class CameraManager : MonoBehaviour {
         }
 
 		//if(cameras[currentCameraIndex].name == "TopDownCamera"){
-		if(true){
-			if (Input.GetKey (KeyCode.W)) {
-				//Debug.Log ("move topdown up");
-				cameras [currentCameraIndex].transform.position -= new Vector3 (camMoveSpeed,0,0);
-			}
-			if (Input.GetKey (KeyCode.S)) {
-				//Debug.Log ("move topdown down");
-				cameras [currentCameraIndex].transform.position +=new Vector3 (camMoveSpeed,0,0);
-			}
-			if (Input.GetKey (KeyCode.A)) {
-				//Debug.Log ("move topdown left");
-				cameras [currentCameraIndex].transform.position -= new Vector3 (0,0,camMoveSpeed);
-			}
-			if (Input.GetKey (KeyCode.D)) {
-				//Debug.Log ("move topdown right");
-				cameras [currentCameraIndex].transform.position += new Vector3 (0,0,camMoveSpeed);
-			}
-			if (Input.GetKey (KeyCode.E)) {
-				//Debug.Log ("move topdown out");
-				cameras [currentCameraIndex].transform.position += new Vector3 (0,camMoveSpeed,0);
-			}
-			if (Input.GetKey (KeyCode.Q)) {
-				//Debug.Log ("move topdown in");
-				cameras [currentCameraIndex].transform.position -= new Vector3 (0,camMoveSpeed,0);
-			}
-		
+
+		if (Input.GetKey (KeyCode.W)) {
+			//Debug.Log ("move topdown up");
+			cameras [currentCameraIndex].transform.position -= new Vector3 (camMoveSpeed, 0, 0);
+		}
+		if (Input.GetKey (KeyCode.S)) {
+			//Debug.Log ("move topdown down");
+			cameras [currentCameraIndex].transform.position += new Vector3 (camMoveSpeed, 0, 0);
+		}
+		if (Input.GetKey (KeyCode.A)) {
+			//Debug.Log ("move topdown left");
+			cameras [currentCameraIndex].transform.position -= new Vector3 (0, 0, camMoveSpeed);
+		}
+		if (Input.GetKey (KeyCode.D)) {
+			//Debug.Log ("move topdown right");
+			cameras [currentCameraIndex].transform.position += new Vector3 (0, 0, camMoveSpeed);
+		}
+		if (Input.GetKey (KeyCode.E)) {
+			//Debug.Log ("move topdown out");
+			cameras [currentCameraIndex].transform.position += new Vector3 (0, camMoveSpeed, 0);
+		}
+		if (Input.GetKey (KeyCode.Q)) {
+			//Debug.Log ("move topdown in");
+			cameras [currentCameraIndex].transform.position -= new Vector3 (0, camMoveSpeed, 0);
+		}
+
+		//hardcode snap to topdown cam
+		if (Input.GetKey (KeyCode.LeftShift)) {
+			//Debug.Log ("move topdown in");
+			cameras[currentCameraIndex].gameObject.SetActive(false);
+			currentCameraIndex = 6;
+			cameras[6].gameObject.SetActive(true);
 		}
 
     }
