@@ -20,14 +20,14 @@ public class PathFollower : MonoBehaviour {
 	[SerializeField]
 	List<GameObject> targets;
 
-	Rigidbody RB;
+	CharacterController CC;
 
 	// Use this for initialization
 	void Start () {
 		currentTarget = targets [index];
-		RB = gameObject.GetComponent<Rigidbody> ();
+		CC = gameObject.GetComponent<CharacterController> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	
@@ -43,7 +43,7 @@ public class PathFollower : MonoBehaviour {
 				currentTarget = targets [index];
 			}
 
-			RB.AddForce(tempDir * speed);
+			CC.Move(tempDir * speed);
 
 			transform.right = tempDir.normalized;
 		}
