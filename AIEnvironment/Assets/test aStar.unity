@@ -187,6 +187,10 @@ Prefab:
       propertyPath: gizmoColor.b
       value: 0.86
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -253,6 +257,10 @@ Prefab:
       propertyPath: gizmoColor.b
       value: 0.959
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -313,6 +321,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoColor.r
       value: 0.959
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -379,6 +391,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoColor.b
       value: 0.891
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -456,6 +472,10 @@ Prefab:
       propertyPath: gizmoColor.b
       value: 0.959
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -511,6 +531,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoSize
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -1496,6 +1520,10 @@ Prefab:
       propertyPath: gizmoColor.r
       value: 0.116
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -1556,6 +1584,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoColor.b
       value: 0.897
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -1680,6 +1712,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoColor.r
       value: 0.116
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -1853,6 +1889,10 @@ Prefab:
       propertyPath: gizmoSize
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -1985,6 +2025,10 @@ Prefab:
       propertyPath: gizmoSize
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -2035,6 +2079,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoSize
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -2102,6 +2150,10 @@ Prefab:
       propertyPath: gizmoColor.b
       value: 0.86
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -2162,6 +2214,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoSize
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -2372,6 +2428,10 @@ Prefab:
       propertyPath: gizmoColor.r
       value: 0.959
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -2432,6 +2492,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoColor.b
       value: 0.897
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -2558,6 +2622,10 @@ Prefab:
       propertyPath: gizmoColor.b
       value: 0.959
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -2618,6 +2686,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoColor.r
       value: 0.959
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -2780,6 +2852,10 @@ Prefab:
       propertyPath: gizmoColor.r
       value: 0.959
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -2846,6 +2922,10 @@ Prefab:
       propertyPath: gizmoColor.b
       value: 0.897
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -2901,6 +2981,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoSize
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -2963,6 +3047,10 @@ Prefab:
       propertyPath: gizmoColor.r
       value: 0.116
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -3019,6 +3107,10 @@ Prefab:
       propertyPath: gizmoColor.r
       value: 0.053
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -3069,6 +3161,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoSize
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -3229,6 +3325,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoColor.r
       value: 0.959
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -3551,6 +3651,10 @@ Prefab:
       propertyPath: gizmoColor.b
       value: 0.891
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -3621,6 +3725,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoColor.b
       value: 0.959
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -3698,6 +3806,10 @@ Prefab:
       propertyPath: gizmoColor.r
       value: 0.959
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -3758,6 +3870,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoColor.r
       value: 0.053
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -3835,6 +3951,10 @@ Prefab:
       propertyPath: gizmoColor.b
       value: 0.959
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -3896,6 +4016,10 @@ Prefab:
       propertyPath: gizmoSize
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -3946,6 +4070,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoSize
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -4089,6 +4217,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoColor.r
       value: 0.053
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -4253,6 +4385,10 @@ Prefab:
       propertyPath: gizmoColor.b
       value: 0.891
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -4303,6 +4439,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -4360,6 +4500,10 @@ Prefab:
       propertyPath: gizmoColor.r
       value: 0.116
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -4415,6 +4559,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoColor.r
       value: 0.209
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
@@ -4482,6 +4630,10 @@ Prefab:
       propertyPath: gizmoColor.b
       value: 0.959
       objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
   m_IsPrefabParent: 0
@@ -4542,6 +4694,10 @@ Prefab:
         type: 2}
       propertyPath: gizmoColor.r
       value: 0.959
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167052868937672, guid: 95cdc35e251687d4f949772943455a47, type: 2}
+      propertyPath: m_TagString
+      value: Node
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95cdc35e251687d4f949772943455a47, type: 2}
