@@ -7,6 +7,9 @@ public class CameraManager : MonoBehaviour {
     public Camera[] cameras;
     private int currentCameraIndex;
 
+	[SerializeField]
+	float camMoveSpeed=1;
+
 	// Use this for initialization
 	void Start () {
         currentCameraIndex = 0;
@@ -47,8 +50,34 @@ public class CameraManager : MonoBehaviour {
             }
         }
 
-        // also handle quitting in here now, temporarily
-        if (Input.GetKey("escape"))
-            Application.Quit();
+		//if(cameras[currentCameraIndex].name == "TopDownCamera"){
+		if(true){
+			if (Input.GetKey (KeyCode.W)) {
+				//Debug.Log ("move topdown up");
+				cameras [currentCameraIndex].transform.position -= new Vector3 (camMoveSpeed,0,0);
+			}
+			if (Input.GetKey (KeyCode.S)) {
+				//Debug.Log ("move topdown down");
+				cameras [currentCameraIndex].transform.position +=new Vector3 (camMoveSpeed,0,0);
+			}
+			if (Input.GetKey (KeyCode.A)) {
+				//Debug.Log ("move topdown left");
+				cameras [currentCameraIndex].transform.position -= new Vector3 (0,0,camMoveSpeed);
+			}
+			if (Input.GetKey (KeyCode.D)) {
+				//Debug.Log ("move topdown right");
+				cameras [currentCameraIndex].transform.position += new Vector3 (0,0,camMoveSpeed);
+			}
+			if (Input.GetKey (KeyCode.E)) {
+				//Debug.Log ("move topdown out");
+				cameras [currentCameraIndex].transform.position += new Vector3 (0,camMoveSpeed,0);
+			}
+			if (Input.GetKey (KeyCode.Q)) {
+				//Debug.Log ("move topdown in");
+				cameras [currentCameraIndex].transform.position -= new Vector3 (0,camMoveSpeed,0);
+			}
+		
+		}
+
     }
 }
