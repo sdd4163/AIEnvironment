@@ -13,6 +13,20 @@ public class gameManagerScript : MonoBehaviour {
 	[SerializeField]
 	PriorityQueue q;
 
+	List<Flocker> flockers;
+	public List<Flocker> Flockers {
+		get {
+			return flockers;
+		}
+	}
+
+	Vector3 flockCenter;
+	public Vector3 FlockCenter {
+		get {
+			return flockCenter;
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		q = new PriorityQueue ();
@@ -51,5 +65,15 @@ public class gameManagerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	void GetFlockCenter() {
+		Vector3 center = Vector3.zero;
+		foreach (Flocker f in flockers) {
+			center += f.transform.position;
+		}
+
+		center = center / flockers.Count;
+		flockCenter = center;
 	}
 }
