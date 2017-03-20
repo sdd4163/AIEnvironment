@@ -6,8 +6,10 @@ public class nodeScript : MonoBehaviour {
 
 	[SerializeField]
 	List<GameObject> neighbors;
+
 	[SerializeField]
 	int weight;
+
 	bool visited;
 	GameObject previousNode;
 	float lowestTotalCost = Mathf.Infinity;
