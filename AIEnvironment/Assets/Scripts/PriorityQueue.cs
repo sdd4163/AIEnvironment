@@ -22,6 +22,8 @@ public class PriorityQueue : MonoBehaviour {
 	{
 		return 2 * i + 2;
 	}
+    
+    public int Count { get { return count; } }
 
 	void heapifyUp(int i)
 	{
@@ -118,6 +120,26 @@ public class PriorityQueue : MonoBehaviour {
 		count += 1;
 		heapifyUp(count - 1);
 	}
+
+    public bool Contains(GameObject val)
+    {
+        for (int i = 0; i < values.Length; i++)
+        {
+            if (values[i] == val)
+                return true;
+        }
+        return false;
+    }
+
+    public GameObject Find(GameObject val)
+    {
+        for (int i = 0; i < values.Length; i++)
+        {
+            if (values[i] == val)
+                return values[i];
+        }
+        return null;
+    }
 		
 
 	// Use this for initialization

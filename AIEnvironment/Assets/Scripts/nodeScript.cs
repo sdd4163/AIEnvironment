@@ -12,6 +12,17 @@ public class nodeScript : MonoBehaviour
     float lowestTotalCost = Mathf.Infinity;
     bool dropped = false;
 
+    // serves as our NodeRecord
+    private float costSoFar = 0;
+    private float cost = 0;
+    private GameObject connection = null;
+    private float estimatedTotalCost = 0;
+
+    public float Cost { get { return cost; } set { cost = value; } }
+    public GameObject Connection { get { return connection; } set { connection = value; } }
+    public float EstimatedTotalCost { get { return estimatedTotalCost; } set { estimatedTotalCost = value; } }
+    public float CostSoFar { get { return costSoFar; } set { costSoFar = value; } }
+
     GameObject[] graph;
     
     //public bool hasNeighbors = false;

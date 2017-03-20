@@ -13,12 +13,16 @@ public class PathFollower : MonoBehaviour {
 	[SerializeField]
 	float speed;
 
-	[SerializeField]
-	GameObject currentTarget;
+	
+	public GameObject currentTarget;
 	int index = 0;
+
+
 
 	[SerializeField]
 	List<GameObject> targets;
+
+    public List<GameObject> Targets { set { targets = value; } get { return targets; } }
 
 	CharacterController CC;
 
@@ -37,9 +41,15 @@ public class PathFollower : MonoBehaviour {
 			float dist = tempDir.magnitude;
 			tempDir.Normalize ();
 
-			if(dist< 10){
+			if(dist< 5){
 				Debug.Log ("arrived!");
-				index++ ; index = index % targets.Count;
+				index++ ;
+                if (index >= targets.Count)
+                {
+                    index = targets.Count;
+                    moving = false;
+                    return;
+                }
 				currentTarget = targets [index];
 			}
 
