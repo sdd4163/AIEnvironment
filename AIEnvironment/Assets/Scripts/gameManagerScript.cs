@@ -64,7 +64,15 @@ public class gameManagerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			quitGame ();
+		}
+		if(Input.GetKeyDown(KeyCode.P))
+		{
+			pauseGame ();
+		}
 	}
 
 	void GetFlockCenter() {
@@ -76,4 +84,36 @@ public class gameManagerScript : MonoBehaviour {
 		center = center / flockers.Count;
 		flockCenter = center;
 	}
+
+
+	public void quitGame()
+	{
+		//If we are running in a standalone build of the game
+		#if UNITY_STANDALONE
+		//Quit the application
+		Application.Quit();
+		#endif
+
+		//If we are running in the editor
+		#if UNITY_EDITOR
+		//Stop playing the scene
+		UnityEditor.EditorApplication.isPlaying = false;
+		#endif
+	}
+
+	public void pauseGame()
+	{
+		//If we are running in a standalone build of the game
+		#if UNITY_STANDALONE
+		//Quit the application
+		//
+		#endif
+
+		//If we are running in the editor
+		#if UNITY_EDITOR
+		//Stop playing the scene
+		Debug.Break();
+		#endif
+	}
+
 }
