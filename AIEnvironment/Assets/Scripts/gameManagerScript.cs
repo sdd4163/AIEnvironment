@@ -48,6 +48,7 @@ public class gameManagerScript : MonoBehaviour {
         {
             aStarAgent.GetComponent<PathFollower>().Targets = pathfindAStar(goal);
             aStarAgent.GetComponent<PathFollower>().currentTarget = aStarAgent.GetComponent<PathFollower>().Targets[0];
+			aStarAgent.GetComponent<PathFollower> ().moving = true;
             pathCalculated = true;
         }
             

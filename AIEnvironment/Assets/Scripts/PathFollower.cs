@@ -5,7 +5,7 @@ using UnityEngine;
 public class PathFollower : MonoBehaviour {
 
 	[SerializeField]
-	bool moving = true;
+	public bool moving = false;
 
 	[SerializeField]
 	bool arrived = false;
@@ -28,8 +28,8 @@ public class PathFollower : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		currentTarget = targets [index];
 		CC = gameObject.GetComponent<CharacterController> ();
+		moving = false;
 	}
 
 	// Update is called once per frame
