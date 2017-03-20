@@ -6,11 +6,13 @@ using UnityEngine;
 public class nodeScript : MonoBehaviour
 {
     Gizmo gizmo;
-    List<GameObject> neighbors;
+    public List<GameObject> neighbors;
     public bool visited = false;
     GameObject previousNode;
     float lowestTotalCost = Mathf.Infinity;
     bool dropped = false;
+
+    GameObject[] graph;
     
     //public bool hasNeighbors = false;
 
@@ -27,7 +29,7 @@ public class nodeScript : MonoBehaviour
         detectRadius = gizmo.gizmoSize;
 
         // calculate all node neighbors
-        GameObject[] graph = GameObject.FindGameObjectsWithTag("Node");
+        graph = GameObject.FindGameObjectsWithTag("Node");
 
         for (int i = 0; i < graph.Length; i++)
         {
@@ -43,6 +45,13 @@ public class nodeScript : MonoBehaviour
     {
         if (!dropped)
         {
+            // first, make sure each node is doubly linked
+            for (int i = 0; i < graph.Length; i++)
+            {
+                if (graph[i].GetComponent<nodeScript>().neighbors.Contains(this.gameObject) && neighbors.Contains(graph[i]) == false)
+                    neighbors.Add(graph[i]);
+            }
+
             // drop the node onto the terrain
             RaycastHit hit;
 
