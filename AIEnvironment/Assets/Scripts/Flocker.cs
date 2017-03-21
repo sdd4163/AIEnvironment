@@ -37,6 +37,14 @@ public class Flocker : MonoBehaviour {
 
 	float alignWgt;
 	float seekWgt;
+	public float SeekWgt {
+		get {
+			return seekWgt;
+		}
+		set {
+			seekWgt = value;
+		}
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -68,7 +76,7 @@ public class Flocker : MonoBehaviour {
 
 		velocity += Separation () * separationWgt;
 		velocity += Cohesion () * cohesionWgt;
-		//velocity += GetNeighborhoodAlignment () * alignWgt;
+		//velocity += GetNeighborhoodAlignment () * alignWgt;   Was causing issues with flocking, removed for time
 		if (caught) {
 			velocity += Follow() * seekWgt;
 		}

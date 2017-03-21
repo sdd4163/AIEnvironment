@@ -97,6 +97,12 @@ public class gameManagerScript : MonoBehaviour {
 		else if (Input.GetKeyDown (KeyCode.Alpha4)) {
 			ModSeparation (true);
 		}
+		if (Input.GetKeyDown (KeyCode.Alpha5)) {
+			ModSeek ();
+		}
+		else if (Input.GetKeyDown (KeyCode.Alpha6)) {
+			ModSeek (true);
+		}
 	}
 
 	void GetFlockCenter() {
@@ -131,6 +137,19 @@ public class gameManagerScript : MonoBehaviour {
 			}
 			if (f.SeparationWgt < 0.05f) {
 				f.SeparationWgt = 0.05f;
+			}
+		}
+	}
+
+	void ModSeek(bool negative = false) {
+		foreach (Flocker f in flockers) {
+			if (negative) {
+				f.SeekWgt -= .05f;
+			} else {
+				f.SeekWgt += .05f;
+			}
+			if (f.SeekWgt < 0.05f) {
+				f.SeekWgt = 0.05f;
 			}
 		}
 	}
