@@ -1527,6 +1527,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goal: {fileID: 1901503795}
+  flockerPrefab: {fileID: 1003014497478802, guid: d4468f09aec676d45a88926d68ebe7ed,
+    type: 2}
+  flockerSpawn: {fileID: 1045115757}
 --- !u!4 &392366908
 Transform:
   m_ObjectHideFlags: 0
@@ -6690,6 +6693,34 @@ Transform:
   m_Father: {fileID: 115314767}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -0.45000002, y: 73.65501, z: 0.711}
+--- !u!1 &1045115757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1045115758}
+  m_Layer: 0
+  m_Name: FlockSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1045115758
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1045115757}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 272.3, y: 36.8, z: 166.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1051922311
 Prefab:
   m_ObjectHideFlags: 0

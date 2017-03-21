@@ -54,7 +54,7 @@ public class Flocker : MonoBehaviour {
 		seekWgt = seekW;
 
 		neighborhoodSize = 12.5f;
-		maxSpeed = 15.0f;
+		maxSpeed = 17.5f;
 	}
 	
 	// Update is called once per frame

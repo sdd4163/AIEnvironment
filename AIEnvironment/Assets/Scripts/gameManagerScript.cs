@@ -60,7 +60,7 @@ public class gameManagerScript : MonoBehaviour {
 			pos.z += Random.Range (-flockCount, flockCount);
 			GameObject tempF = GameObject.Instantiate (flockerPrefab, pos, Quaternion.identity); 
 			flockers.Add(tempF.GetComponent<Flocker> ());
-			flockers [i].Initialize (0.8f, 0.15f, 0.1f, 0.3f);
+			flockers [i].Initialize (0.85f, 0.15f, 0.1f, 0.3f);
 		}
 	}
 	
