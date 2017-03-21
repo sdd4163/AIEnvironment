@@ -9,21 +9,77 @@ public class Flocker : MonoBehaviour {
 	gameManagerScript gManager;
 	CharacterController characterController;
 
+	GameObject player;
+
 	float neighborhoodSize, maxSpeed;
 	bool[] inNeighborhood;
+	bool caught = false;
+
+	float separationWgt;
+	public float SeparationWgt {
+		get {
+			return separationWgt;
+		}
+		set {
+			separationWgt = value;
+		}
+	}
+
+	float cohesionWgt;
+	public float CohesionWgt {
+		get {
+			return cohesionWgt;
+		}
+		set {
+			cohesionWgt = value;
+		}
+	}
+
+	float alignWgt;
+	float seekWgt;
 
 	// Use this for initialization
 	void Start () {
 		gManager = GameObject.Find ("GM").GetComponent<gameManagerScript> ();
 		characterController = gameObject.GetComponent<CharacterController> ();
+		player = GameObject.Find ("Player");
 
-		inNeighborhood = new bool[gManager.Flockers.Count];
+		inNeighborhood = new bool[gManager.FlockCount];
+	}
+
+	public void Initialize(float sepW, float cohW, float alignW, float seekW) {
+		separationWgt = sepW;
+		cohesionWgt = cohW;
+		alignWgt = alignW;
+		seekWgt = seekW;
+
+		neighborhoodSize = 12.5f;
+		maxSpeed = 15.0f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Vector3.Distance (player.transform.position, GetFlockCenter ()) < 65 && !caught) {
+			caught = true;
+		}
+		BuildNeighborhood ();
+
+		Vector3 velocity = Vector3.zero;
+
+		velocity += Separation () * separationWgt;
+		velocity += Cohesion () * cohesionWgt;
+		//velocity += GetNeighborhoodAlignment () * alignWgt;
+		if (caught) {
+			velocity += Follow() * seekWgt;
+		}
+
+		velocity.y = 0;
+		velocity = Vector3.ClampMagnitude (velocity, maxSpeed);
+		velocity.y -= 1000.0f;
+		characterController.Move (velocity * Time.deltaTime);
 	}
+
+
 
 	void BuildNeighborhood() {
 		for (int i = 0; i < gManager.Flockers.Count; i++) {
@@ -64,17 +120,22 @@ public class Flocker : MonoBehaviour {
 			}
 		}
 		avgVel = avgVel / count;
+		avgVel.y = 0;
 		return avgVel;
 	}
 
 	Vector3 GetNeighborhoodAlignment() {
+		Vector3 avgAlign = Vector3.zero;
+		int count = 0;
 		for (int i = 0; i < gManager.Flockers.Count; i++) {
 			if (inNeighborhood [i]) {
-				
+				avgAlign += gManager.Flockers [i].transform.position;
+				count++;
 			}
 
 		}
-		return transform.forward;
+		avgAlign.Normalize ();
+		return avgAlign / count;
 	}
 
 	Vector3 Separation() {
@@ -101,5 +162,13 @@ public class Flocker : MonoBehaviour {
 		dv *= maxSpeed;
 		dv.y = 0;
 		return dv;
+	}
+
+	Vector3 Follow()
+	{
+		Vector3 tv = player.transform.forward * -1;
+		tv = Vector3.Normalize (tv) * 25.0f;
+		Vector3 behind = player.transform.position + tv;
+		return Seek(behind);
 	}
 }

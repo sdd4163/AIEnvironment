@@ -20,13 +20,25 @@ public class gameManagerScript : MonoBehaviour {
     bool pathCalculated = false;
 
     // flocker attributes
+	[SerializeField]
+	GameObject flockerPrefab;
+
+	[SerializeField]
+	GameObject flockerSpawn;
+
+	int flockCount = 25;
+	public int FlockCount {
+		get {
+			return flockCount;
+		}
+	}
+
 	List<Flocker> flockers;
 	public List<Flocker> Flockers {
 		get {
 			return flockers;
 		}
 	}
-
 	Vector3 flockCenter;
 	public Vector3 FlockCenter {
 		get {
@@ -35,15 +47,27 @@ public class gameManagerScript : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		open = new PriorityQueue ();
         nodeArray = GameObject.FindGameObjectsWithTag("Node");
         aStarAgent = GameObject.Find("aStarAgent");
 		open.Setup ();
+
+		flockers = new List<Flocker> ();
+		for (int i = 0; i < flockCount; i++) {
+			Vector3 pos = flockerSpawn.transform.position;
+			pos.x += Random.Range (-flockCount, flockCount);
+			pos.z += Random.Range (-flockCount, flockCount);
+			GameObject tempF = GameObject.Instantiate (flockerPrefab, pos, Quaternion.identity); 
+			flockers.Add(tempF.GetComponent<Flocker> ());
+			flockers [i].Initialize (0.8f, 0.15f, 0.1f, 0.3f);
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		GetFlockCenter ();
         if (!pathCalculated)
         {
             aStarAgent.GetComponent<PathFollower>().Targets = pathfindAStar(goal);
@@ -59,6 +83,20 @@ public class gameManagerScript : MonoBehaviour {
 		{
 			pauseGame ();
 		}
+
+		//Modify flocking params
+		if (Input.GetKeyDown (KeyCode.Alpha1)) {
+			ModCohesion ();
+		}
+		else if (Input.GetKeyDown (KeyCode.Alpha2)) {
+			ModCohesion (true);
+		}
+		if (Input.GetKeyDown (KeyCode.Alpha3)) {
+			ModSeparation ();
+		}
+		else if (Input.GetKeyDown (KeyCode.Alpha4)) {
+			ModSeparation (true);
+		}
 	}
 
 	void GetFlockCenter() {
@@ -71,6 +109,31 @@ public class gameManagerScript : MonoBehaviour {
 		flockCenter = center;
 	}
 
+	void ModCohesion(bool negative = false) {
+		foreach (Flocker f in flockers) {
+			if (negative) {
+				f.CohesionWgt -= .05f;
+			} else {
+				f.CohesionWgt += .05f;
+			}
+			if (f.CohesionWgt < 0.05f) {
+				f.CohesionWgt = 0.05f;
+			}
+		}
+	}
+
+	void ModSeparation(bool negative = false) {
+		foreach (Flocker f in flockers) {
+			if (negative) {
+				f.SeparationWgt -= .05f;
+			} else {
+				f.SeparationWgt += .05f;
+			}
+			if (f.SeparationWgt < 0.05f) {
+				f.SeparationWgt = 0.05f;
+			}
+		}
+	}
 
 	public void quitGame()
 	{
