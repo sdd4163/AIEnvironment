@@ -19,6 +19,7 @@ public class CameraManager : MonoBehaviour {
         {
             cameras[i].gameObject.SetActive(false);
         }
+		cameras[0].gameObject.SetActive(true);
 
         //If any cameras were added to the controller, enable the first one
         if (cameras.Length > 0)
@@ -76,14 +77,7 @@ public class CameraManager : MonoBehaviour {
 			//Debug.Log ("move topdown in");
 			cameras [currentCameraIndex].transform.position -= new Vector3 (0, camMoveSpeed, 0);
 		}
-
-		//hardcode snap to topdown cam
-		if (Input.GetKey (KeyCode.LeftShift)) {
-			//Debug.Log ("move topdown in");
-			cameras[currentCameraIndex].gameObject.SetActive(false);
-			currentCameraIndex = 6;
-			cameras[6].gameObject.SetActive(true);
-		}
+			
 
     }
 }
