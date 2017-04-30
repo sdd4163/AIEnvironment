@@ -74,8 +74,8 @@ public class gameManagerScript : MonoBehaviour {
         //}
 
         // initialize grid
-        grid = new GameObject[100, 100];
-        Vector3 pos = new Vector3(0, 100, 0); // pos will be incremented to spawn new nodes at certain spots
+        grid = new GameObject[NUM_ROWS, NUM_COLS];
+        Vector3 pos = new Vector3(500 / NUM_COLS / 2, 100, 500 / NUM_ROWS / 2); // pos will be incremented to spawn new nodes at certain spots
 
         for (int i = 0; i < NUM_ROWS; i++)
         {
@@ -83,10 +83,13 @@ public class gameManagerScript : MonoBehaviour {
             {
                 grid[i, j] = GameObject.Instantiate(node, pos, Quaternion.identity);
 
+                // drop the node
+                grid[i, j].GetComponent<nodeScript>().Drop();
+
                 // increment the position
                 pos.x += 500 / NUM_COLS;
             }
-            pos.x = 0;
+            pos.x = 500 / NUM_COLS / 2;
             pos.z += 500 / NUM_ROWS;
         }
 	}

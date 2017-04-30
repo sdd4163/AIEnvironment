@@ -86,5 +86,19 @@ public class nodeScript : MonoBehaviour
         //    Debug.DrawLine(transform.position, neighbors[i].transform.position);
         //}
     }
+
+    /// <summary>
+    /// Will drop the current node onto the terrain
+    /// </summary>
+    public void Drop()
+    {
+        RaycastHit hit;
+        
+        if (Physics.Raycast(transform.position, -transform.up, out hit))
+            transform.position = new Vector3(transform.position.x, transform.position.y - hit.distance, transform.position.z);
+        else
+            Debug.Log("Terrain not detected below node " + this.name);
+    }
+
 }
 

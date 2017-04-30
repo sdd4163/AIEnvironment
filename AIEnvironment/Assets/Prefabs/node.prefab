@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6909567c1237cb446a7d3739ce999717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gizmoSize: 50
+  gizmoSize: 20
   gizmoColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   isVisible: 1
 --- !u!114 &114836986343069266
