@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 33065118197902328}
   - component: {fileID: 136311272926531140}
   - component: {fileID: 23957622529783800}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: teamColor
-  m_TagString: Untagged
+  m_TagString: UnitBase
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4510059029672152}
   - component: {fileID: 33814388415337186}
   - component: {fileID: 23596613310859468}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: strengthColor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4177442822361772}
   - component: {fileID: 114480978184485116}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: red[3]
   m_TagString: Unit
   m_Icon: {fileID: 0}

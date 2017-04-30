@@ -28,6 +28,15 @@ public class MouseToWorld : MonoBehaviour {
 		unit.transform.GetChild(0).GetComponent<CapsuleCollider> ().enabled = false;
 	}
 
+	void OnTriggerStay(Collider other){
+		Debug.Log (other.name);
+
+		if (Input.GetKeyDown (KeyCode.Mouse1)) {
+			if (other.tag == "UnitBase")
+				GameObject.Destroy (other.transform.parent.gameObject);
+		}	
+	}
+
 	// Update is called once per frame
 	void Update () {
 
@@ -59,6 +68,7 @@ public class MouseToWorld : MonoBehaviour {
 
 			GameObject temp = GameObject.Instantiate (unitPrefabs [index], GameObject.Find ("Units").transform);
 			temp.transform.position = new Vector3 (transform.position.x, transform.position.y + 0.5f, transform.position.z);
+			temp.transform.GetChild(0).GetComponent<CapsuleCollider> ().enabled = true;
 
 		}
 			
