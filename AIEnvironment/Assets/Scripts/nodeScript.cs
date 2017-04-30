@@ -5,8 +5,25 @@ using UnityEngine;
 
 public class nodeScript : MonoBehaviour
 {
+    // any time you want to change the color of a node, use this enum
+    public enum Team { RED, GREEN, GRAY};
+
+    // represents the current material
     private Material mat;
 
+    // which team currently has control,
+    // red for red
+    // green for green
+    // gray for neutral or tied
+    private Team currentTeam;
+
+    // materials that can be swapped between
+    [SerializeField]
+    private Material greenMat;
+    [SerializeField]
+    private Material grayMat;
+    [SerializeField]
+    private Material redMat;
     // depricated A*
     /*Gizmo gizmo;
     public List<GameObject> neighbors;
@@ -33,6 +50,9 @@ public class nodeScript : MonoBehaviour
     // any visible nodes within this radius will be counting 
     //private float detectRadius;
 
+    // property for the currentTeam variable to allow it to be modified externally
+    public Team CurrentTeam { get { return currentTeam; }  set { currentTeam = value; } }
+
     // Use this for initialization
     void Start()
     {
@@ -54,7 +74,9 @@ public class nodeScript : MonoBehaviour
         //}
 
         // get the material to be able to change it
-        //mat = GetComponent<Material>();
+        mat = GetComponent<MeshRenderer>().materials[0];
+        mat = grayMat;
+        currentTeam = Team.GRAY;
     }
 
     // Update is called once per frame
@@ -85,6 +107,21 @@ public class nodeScript : MonoBehaviour
         //{
         //    Debug.DrawLine(transform.position, neighbors[i].transform.position);
         //}
+
+        // update the material depending on which enum is activated
+        switch (currentTeam)
+        {
+            case Team.GRAY:
+                mat = grayMat;
+                break;
+            case Team.RED:
+                mat = redMat;
+                break;
+            case Team.GREEN:
+                mat = greenMat;
+                break;
+        }
+        GetComponent<MeshRenderer>().material = mat;
     }
 
     /// <summary>
