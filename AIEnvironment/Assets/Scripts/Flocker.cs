@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Flocker : MonoBehaviour {
+/*public class Flocker : MonoBehaviour {
 
 	//TODO: CalcSteeringForce, LeaderFollow/Tunnel, Constraint controls
 
@@ -179,4 +179,4 @@ public class Flocker : MonoBehaviour {
 		Vector3 behind = player.transform.position + tv;
 		return Seek(behind);
 	}
-}
+}*/
