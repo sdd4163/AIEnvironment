@@ -1526,10 +1526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a47af141418ff42b98b51912bbf01f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goal: {fileID: 1901503795}
-  flockerPrefab: {fileID: 1003014497478802, guid: d4468f09aec676d45a88926d68ebe7ed,
-    type: 2}
-  flockerSpawn: {fileID: 1045115757}
+  node: {fileID: 0}
 --- !u!4 &392366908
 Transform:
   m_ObjectHideFlags: 0
@@ -4438,7 +4435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &706254898
 Transform:
   m_ObjectHideFlags: 0

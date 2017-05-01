@@ -1,12 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class gameManagerScript : MonoBehaviour {
 
     // for use in initializing our grid
-    const int NUM_ROWS = 10;
-    const int NUM_COLS = 10;
+    const int NUM_ROWS = 11;
+    const int NUM_COLS = 11;
     const int NUM_NODES = NUM_COLS * NUM_ROWS;
 
 	//List<GameObject> nodes;
