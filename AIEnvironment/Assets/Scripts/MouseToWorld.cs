@@ -72,6 +72,5 @@ public class MouseToWorld : MonoBehaviour {
 			transform.position = new Vector3 (hit.point.x, hit.point.y, hit.point.z);
 			unit.transform.position = transform.position;
 		}
-			
 	}
 }

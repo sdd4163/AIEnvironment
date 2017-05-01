@@ -74,24 +74,24 @@ public class gameManagerScript : MonoBehaviour {
         //}
 
         // initialize grid
-        grid = new GameObject[NUM_ROWS, NUM_COLS];
-        Vector3 pos = new Vector3(500 / NUM_COLS / 2, 100, 500 / NUM_ROWS / 2); // pos will be incremented to spawn new nodes at certain spots
+		grid = new GameObject[NUM_ROWS, NUM_COLS];
+		Vector3 pos = new Vector3(500 / NUM_COLS / 2, 100, 500 / NUM_ROWS / 2); // pos will be incremented to spawn new nodes at certain spots
 
-        for (int i = 0; i < NUM_ROWS; i++)
-        {
-            for (int j = 0; j < NUM_COLS; j++)
-            {
-                grid[i, j] = GameObject.Instantiate(node, pos, Quaternion.identity);
+		for (int i = 0; i < NUM_ROWS; i++)
+		{
+			for (int j = 0; j < NUM_COLS; j++)
+			{
+				grid[i, j] = GameObject.Instantiate(node, pos, Quaternion.identity);
 
-                // drop the node
-                grid[i, j].GetComponent<nodeScript>().Drop();
+				// drop the node
+				grid[i, j].GetComponent<nodeScript>().Drop();
 
-                // increment the position
-                pos.x += 500 / NUM_COLS;
-            }
-            pos.x = 500 / NUM_COLS / 2;
-            pos.z += 500 / NUM_ROWS;
-        }
+				// increment the position
+				pos.x += 500 / NUM_COLS;
+			}
+			pos.x = 500 / NUM_COLS / 2;
+			pos.z += 500 / NUM_ROWS;
+		}
 	}
 	
 	// Update is called once per frame
@@ -113,7 +113,10 @@ public class gameManagerScript : MonoBehaviour {
 		{
 			pauseGame ();
 		}
-
+		if(Input.GetKeyDown(KeyCode.M))
+		{
+			GenerateInfluenceMap ();
+		}
 		//Modify flocking params
 		//if (Input.GetKeyDown (KeyCode.Alpha1)) {
 		//	ModCohesion ();
@@ -133,6 +136,33 @@ public class gameManagerScript : MonoBehaviour {
 		//else if (Input.GetKeyDown (KeyCode.Alpha6)) {
 		//	ModSeek (true);
 		//}
+	}
+
+	void GenerateInfluenceMap() {
+		Unit[] units = GameObject.Find ("Units").GetComponentsInChildren<Unit> ();
+		foreach (GameObject go in grid) {
+			Vector2 gridPos2D = new Vector2 (go.transform.position.x, go.transform.position.z);
+			float grnInf = 0.0f;
+			float redInf = 0.0f;
+			foreach (Unit u in units) {
+				float influence = u.strength / (Vector2.Distance (gridPos2D, u.pos2D) + 1);
+				if (influence < 0.01f) {
+					continue;
+				}
+				if (u.teamColor == 'g') {
+					grnInf += influence;
+				} else {
+					redInf += influence;
+				}
+			}
+			if (grnInf > redInf) {
+				go.GetComponent<nodeScript> ().CurrentTeam = nodeScript.Team.GREEN;
+			} else if (redInf > grnInf) {
+				go.GetComponent<nodeScript> ().CurrentTeam = nodeScript.Team.RED;
+			} else {
+				go.GetComponent<nodeScript> ().CurrentTeam = nodeScript.Team.GRAY;
+			}
+		}
 	}
 
 	//void GetFlockCenter() {
