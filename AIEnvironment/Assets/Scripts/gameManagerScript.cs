@@ -139,14 +139,20 @@ public class gameManagerScript : MonoBehaviour {
 	}
 
 	void GenerateInfluenceMap() {
+		//Get Spawned Units
 		Unit[] units = GameObject.Find ("Units").GetComponentsInChildren<Unit> ();
 		foreach (GameObject go in grid) {
+			//Cast grid position to 2D vector for mapping
 			Vector2 gridPos2D = new Vector2 (go.transform.position.x, go.transform.position.z);
+
 			float grnInf = 0.0f;
 			float redInf = 0.0f;
+
 			foreach (Unit u in units) {
+				//Linear Dropoff for influence
 				float influence = u.strength / (Vector2.Distance (gridPos2D, u.pos2D) + 1);
 				if (influence < 0.01f) {
+					//If the influence is very low it isn't effective, forget it
 					continue;
 				}
 				if (u.teamColor == 'g') {
@@ -155,6 +161,7 @@ public class gameManagerScript : MonoBehaviour {
 					redInf += influence;
 				}
 			}
+			//Set Influences
 			if (grnInf > redInf) {
 				go.GetComponent<nodeScript> ().CurrentTeam = nodeScript.Team.GREEN;
 			} else if (redInf > grnInf) {

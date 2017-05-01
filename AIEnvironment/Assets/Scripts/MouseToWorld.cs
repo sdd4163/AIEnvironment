@@ -66,7 +66,13 @@ public class MouseToWorld : MonoBehaviour {
 		RaycastHit hit;
 
 		//for some reason Input.mousePosition is occasionally null?
-		Ray ray = Camera.current.ScreenPointToRay (Input.mousePosition);
+		Ray ray;
+		try {
+			ray = Camera.current.ScreenPointToRay (Input.mousePosition);
+		}
+		catch {
+			ray = new Ray ();
+		}
 		if (Physics.Raycast (ray, out hit, 1000)) {
 			//print ("hit");
 			transform.position = new Vector3 (hit.point.x, hit.point.y, hit.point.z);

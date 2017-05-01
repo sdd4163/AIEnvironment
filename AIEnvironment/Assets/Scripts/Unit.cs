@@ -12,6 +12,7 @@ public class Unit : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//Cast our position to a 2D vector for mapping
 		pos2D = new Vector2 (transform.position.x, transform.position.z);
 	}
 		
